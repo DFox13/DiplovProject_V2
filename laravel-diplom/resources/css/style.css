@@ -1,0 +1,221 @@
+.wrap {
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.header {
+  margin: 20px;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.nav {
+  background-color: #e5efef;
+  padding: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.nav.fixed {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.nav a {
+  color: black;
+  text-decoration: none;
+  padding: 10px 15px;
+}
+
+.nav a:hover {
+  color: #0c8084;
+}
+
+.address {
+  font-size: 14px;
+}
+
+.address a {
+  text-decoration: none;
+  color: black;
+}
+
+.footer {
+  background: #0c8084;
+  color: white;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.cont {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 17px;
+  flex-wrap: wrap;
+}
+
+.contacts {
+  text-align: center;
+}
+
+#iconV,
+#iconOd,
+#iconWhats {
+  font-size: 25px;
+}
+
+#iconWhats {
+  color: green;
+}
+
+.addressInFoot a {
+  text-decoration: none;
+  color: white;
+}
+
+.createBy {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.menu-button {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+  padding: 10px;
+  background-color: #0c8084;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .header{
+    margin: 20px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .slogan{
+    margin-top: 20px;
+  }
+  .nav {
+    display: none;
+    flex-direction: column;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    align-items: center;
+  }
+
+  .nav.open {
+    display: flex;
+    margin-top: -5px;
+  }
+  .nav.open a {
+    display: flex;
+    justify-content: center;
+    width: 70px;
+    border-bottom: 1px solid #32a1ce;
+  }
+
+  .menu-button {
+    display: block;
+    font-size: 30px;
+  }
+}
+
+
+.list_doctors {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.list_assistents{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.list_admin{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.content-doctors{
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+.content-doctors h2{
+  margin: 20px 0;
+  background: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAgAAZABkAAD/7AARRHVja3kAAQAEAAAAZAAA/+4ADkFkb2JlAGTAAAAAAf/bAIQAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQICAgICAgICAgICAwMDAwMDAwMDAwEBAQEBAQECAQECAgIBAgIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMD/8AAEQgABABSAwERAAIRAQMRAf/EAE0AAQEAAAAAAAAAAAAAAAAAAAAKAQEBAQAAAAAAAAAAAAAAAAAACQoQAQAAAAAAAAAAAAAAAAAAAAARAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AKEGXVS4AAAAAAAAAB//2Q==) bottom left no-repeat;
+  padding-bottom: 10px;
+  font-family: Gotham;
+  font-size: 30px;
+  font-weight: 400;
+  margin: 10px 0;
+  color: #0c8084;
+
+}
+
+.a-one-doctor{
+  text-decoration: none;
+  color: #0c8084;
+}
+.a-one-doctor :hover{
+  color: orange;
+  transition: 0.3s;
+}
+.a-one-doctor img {
+  border-bottom: #0c8084 8px solid;
+  transition: border-bottom-color 0.3s;
+}
+
+.a-one-doctor img:hover {
+  border-bottom-color: orange; 
+}
+.one-doctor {
+  max-width: 250px;
+  width: 100%;
+  font: 18px Gotham;
+  /* text-align: center; */
+  padding: 10px;
+  margin: 20px;
+  border-radius: 10px;
+
+
+}
+
+.one-doctor img{
+  width: 250px;
+  
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+
+#scrollToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #0c8084;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  display: none;
+}
