@@ -1,4 +1,5 @@
-<?php include "template/header.php"; ?>
+@extends('layouts.app')
+@section('content')
         <div class="content-doctors">
                 <h2>Наши Врачи</h2>
                 <div class="list_doctors">
@@ -8,5 +9,5 @@
                 <h2>Администраторы</h2>
                 <div class="list_admin"></div>
         </div>
-<script src="/scripts/scriptDentists.js"> </script>
-<?php include "template/footer.php";?>
+<script src="/assets/js/scriptDentists.js"> </script>
+@endsection

@@ -6,7 +6,11 @@
     <title>Document</title>
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="fontawesome-free-6.6.0-web/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.23.3/dist/css/uikit.min.css" />
+    <script src="/public/assets/js/scriptHeader.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.23.3/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.23.3/dist/js/uikit-icons.min.js"></script>    
     </head>
 <body>
     
@@ -16,10 +20,22 @@
                 <img src="https://www.cstom.ru/wp-content/themes/cstom/images/logo.svg" alt="Логотип">
             </div>
             <div class="">
-                <a href="">Записаться на прием</a>
+            <a href=""><img src="https://www.cstom.ru/wp-content/themes/cstom/images/visually.svg" style="width: 70px;"></a>
             </div>
-            <div class="auth">
-                <a href="/auth">Авторизация</a>
+            <div >
+                <p class="tel"><a href="https://www.cstom.ru/tel:84812315115">8 (4812) 315-115</a></p>
+                <p class="tel"><a href="https://www.cstom.ru/tel:89107104824">8 (910) 710-48-24</a></p>
+            </div>
+            <div class="btn-header">
+                <a href="" class="btn-head ">Заказать обратный звонок</a>
+            
+                
+                @if (Auth::check())
+                <a href="/account">{{ Auth::user()->name }}</a>
+                    @else
+                        <a href="/auth">Log in</a>
+                    @endif
+                
             </div>
             <div class="slogan">
                 <div class="address">
@@ -36,7 +52,7 @@
             <a href="/about">О нас</a>
             <a href="/stock">Акции</a>
             <a href="/contacts">Контакты</a>
-            <a href="/dentists">Врачи</a>
+            <a href="{{ route('dentists.index') }}">Врачи</a>
             <a href="/reviews">Отзывы</a>
         </div>
         <button id="scrollToTop" style="display: none;">Вверх <i class="fa-solid fa-arrow-up"></i></button>

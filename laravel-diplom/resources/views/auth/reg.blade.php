@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('content')
+<div class="auth-form">
 @if ($errors->any())
 <div class="uk-card uk-card-body">
     @foreach ($errors->all() as $error)
@@ -7,19 +8,22 @@
     @endforeach
 </div>
 @endif
-<div class="uk-card uk-card-body">
+<div class="uk-card uk-card-default uk-card-body uk-width-1-2@m">
 <form action="/reg" method="POST">
     @csrf
-    <p>login</p>
+    <p>Ваш логин</p>
     <input type="text" name="name" class="uk-input">
-    <p>email</p>
+    <p>Почта</p>
     <input type="email" name="email" class="uk-input">
-    <p>pass</p>
+    <p>Пароль</p>
     <input type="password" name="password" class="uk-input">
-    <p>confirm pas</p>
+    <p>Повторите пароль</p>
     <input type="password" name="confirm_password" class="uk-input">
-    <a href="/auth">Auth</a></br>
-    <button type="submit" class="uk-button uk-button-primary">Registration</button>
+    <div class="btn-auth">
+    <button type="submit" class="uk-button uk-button-primary" style="width: 200px;">Регистрация</button>
+    <a href="/auth">Авторизация</a></br>
+    </div>
 </form>
+</div>
 </div>
 @endsection
