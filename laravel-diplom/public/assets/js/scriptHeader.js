@@ -24,7 +24,12 @@ else if (servicesParam == "dentists"){
 else if (servicesParam == "reviews"){
     document.getElementById('valuePage').textContent = 'Отзывы';
 }
-
+else if (servicesParam == "auth"){
+    document.getElementById('valuePage').textContent = 'Авторизация';
+}
+else if (servicesParam == "reg"){
+    document.getElementById('valuePage').textContent = 'Регистрация';
+}
 
 
 $(document).ready(function() {

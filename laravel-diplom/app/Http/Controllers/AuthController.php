@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Enums\Roles;
+use App\Models\Role;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -18,7 +19,7 @@ class AuthController extends Controller
         return view('auth.reg');
     }
     public function auth(Request $request){
-     //validation
+   
             $validate = Validator::make($request->only(['name', 'password']), [
                 'name' => 'required',
                 'password' => 'required'
@@ -33,27 +34,29 @@ class AuthController extends Controller
 
     return redirect()->intended('/account');
     }
-    public function reg(Request $request){
-        
-        $validate = Validator::make($request->only(['name', 'password', 'email', 'confirm_password']), [
-            'name' => 'required',
-            'password' => 'required',
-            'email' =>'required|unique:users',
-            'confirm_password' => 'required|required_with:password'
+    public function reg(Request $request)
+    {
+     
+        $validate = Validator::make($request->all(), [
+            'name' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:users',
+            'password' => 'required|string|min:8|confirmed', 
         ]);
-         if ($validate->fails()){
-            // dd($validate);
+
+        if ($validate->fails()) {
             return back()->withErrors($validate);
-         }
+        }
 
-         User::create([
+        $role = Role::where('name', Roles::USER->value)->first();
+
+        User::create([
             'name' => $request->name,
-            'password' => Hash::make($request->password),
             'email' => $request->email,
-            // 'role' => Roles::User
-         ]);
+            'password' => Hash::make($request->password),
+            'role_id' => $role ? $role->id : null, 
+        ]);
 
-         return redirect('/');
+        return redirect('/');
     }
      
 }

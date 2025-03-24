@@ -6,5 +6,8 @@
 <div class="">History of visits</div>
 <div class="">discount</div>
 <div class="">update profile</div>
-
+<form action="{{ route('logout') }}" method="POST" style="display: inline-block;">
+    @csrf
+    <button type="submit" class="btn btn-danger">Выйти</button>
+</form>
 @endsection

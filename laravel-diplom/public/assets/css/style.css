@@ -1,5 +1,5 @@
 .wrap {
-  max-width: 1720px;
+  max-width: 1830px;
   width: 100%;
   margin: 0 auto;
 }
@@ -10,7 +10,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .nav {
@@ -43,6 +43,9 @@
 
 .address {
   font-size: 14px;
+}
+.address p {
+  margin-top: 0px;
 }
 
 .address a {
@@ -254,9 +257,9 @@
   text-align: center;
 }
 
-.tel{
+.tel a{
   text-decoration: none;
-  color: #0c8084;
+  color: black;
   font-size: 17px;
   letter-spacing: .51px;
   font-weight: 500;
