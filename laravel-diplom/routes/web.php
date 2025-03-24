@@ -18,10 +18,12 @@ Route::get('/reviews', function () {return view('review');})->middleware('auth')
 Route::get('/services', function () {return view('service');});
 Route::get('/stock', function () {return view('stock');});
 
-Route::get('/auth', [AuthController::class, 'loginForm']);
-Route::post('/auth', [AuthController::class, 'auth']);
-Route::get('/reg', [AuthController::class, 'regForm']);
-Route::post('/reg', [AuthController::class, 'reg']);
+Route::middleware('guest')->group(function () {
+    Route::get('/auth', [AuthController::class, 'loginForm']);
+    Route::post('/auth', [AuthController::class, 'auth']);
+    Route::get('/reg', [AuthController::class, 'regForm']);
+    Route::post('/reg', [AuthController::class, 'reg']);
+});
 
 Route::get('/account', [AccountController::class, 'index'])->middleware('auth');
 
