@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="wrapper">
     <h1>Управление ролями пользователей</h1>
 
     @if(session('success'))
@@ -41,4 +42,6 @@
             @endforeach
         </tbody>
     </table>
+    <a href="/account">Back</a>
+</div>
 @endsection

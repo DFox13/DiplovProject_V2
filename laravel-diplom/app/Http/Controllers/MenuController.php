@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Jobs\SendNotificationJob;
 use App\Models\MainMenuItems;
 use App\Models\SubMenuItems;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class MenuController extends Controller
 {
-    
     public function showAddCategoryForm()
     {
         return view('admin.add-category');
@@ -20,9 +21,12 @@ class MenuController extends Controller
             'title' => 'required|string|max:255',
         ]);
 
-        MainMenuItems::create([
-            'title' => $request->title,
-        ]);
+        $category = MainMenuItems::create(['title' => $request->title]);
+
+        dispatch(new SendNotificationJob(
+            Auth::user(),
+            "Категория '{$category->title}' успешно добавлена!"
+        ));
 
         return redirect()->back()->with('success', 'Категория успешно добавлена.');
     }
@@ -47,6 +51,7 @@ class MenuController extends Controller
 
         return redirect()->back()->with('success', 'Подпункт успешно добавлен.');
     }
+
     public function editCategory($id)
     {
         $category = MainMenuItems::findOrFail($id);
@@ -64,13 +69,60 @@ class MenuController extends Controller
 
         return redirect()->route('menu.add.category')->with('success', 'Категория успешно обновлена.');
     }
+    public function uploadForm()
+    {
+        return view('admin.upload_csv');
+    }
+
+    public function uploadCSV(Request $request)
+    {
+        $request->validate([
+            'file' => 'required|mimes:csv,txt',
+        ]);
+
+        if ($request->hasFile('file')) {
+            $file = $request->file('file');
+            $lines = file($file->getRealPath()); 
+
+            foreach ($lines as $line) {
+                $data = str_getcsv($line);
+                if (count($data) < 2) continue; 
+
+                $categoryTitle = trim($data[0]);
+                $subTitle = trim($data[1]);
+
+                $category = MainMenuItems::firstOrCreate([
+                    'title' => $categoryTitle
+                ]);
+
+                SubMenuItems::updateOrCreate([
+                    'main_menu_item_id' => $category->id,
+                    'title' => $subTitle
+                ]);
+            }
+
+            dispatch(new SendNotificationJob(
+                Auth::user(),
+                "Категории успешно загружены!"
+            ));
+    
+            return redirect()->route('account');
+        }
+
+        return back()->withErrors('Ошибка загрузки файла');
+    }
 
     public function deleteCategory($id)
     {
         $category = MainMenuItems::findOrFail($id);
-        $category->delete();
 
-        return redirect()->route('menu.add.category')->with('success', 'Категория успешно удалена.');
+        dispatch(new SendNotificationJob(
+            Auth::user(),
+            "Категория '{$category->title}' успешно удалена!"
+        ));
+
+        $category->delete();
+        return redirect()->route('menu.list.categories')->with('success', 'Категория успешно удалена.');
     }
 
     public function editSubItem($id)
@@ -99,14 +151,26 @@ class MenuController extends Controller
     public function deleteSubItem($id)
     {
         $subItem = SubMenuItems::findOrFail($id);
-        $subItem->delete();
 
-        return redirect()->route('menu.add.sub-item')->with('success', 'Подпункт успешно удален.');
+        dispatch(new SendNotificationJob(
+            Auth::user(),
+            "Подпункт '{$subItem->title}' удален"
+        ));
+
+        $subItem->delete();
+        return redirect()->route('menu.list.sub-items');
     }
+
     public function listCategories()
     {
-        $categories = MainMenuItems::all();
+        $categories = MainMenuItems::with('subMenuItems')->get();
         return view('admin.list-categories', compact('categories'));
+    }
+
+    public function getCategoryTitles()
+    {
+        $categories = MainMenuItems::with('subMenuItems')->get();
+        return view('service', compact('categories'));
     }
 
     public function listSubItems()

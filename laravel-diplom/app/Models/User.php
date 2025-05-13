@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Notifications\Notification;
 
 class User extends Authenticatable
 {
@@ -39,5 +40,9 @@ class User extends Authenticatable
     public function canManageRoles(): bool
     {
         return $this->isAdmin() || $this->isSystemAdmin();
+    }
+    public function notifications()
+    {
+        return $this->hasMany(\App\Models\Notification::class); 
     }
 }

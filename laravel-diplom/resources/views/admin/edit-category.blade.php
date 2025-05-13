@@ -1,17 +1,20 @@
 @extends('layouts.app')
 
 @section('content')
-<h1>Редактировать категорию</h1>
+<div class="wrapper">
+    <h1>Редактировать категорию</h1>
 
-    @if(session('success'))
-        <div>{{ session('success') }}</div>
-    @endif
+        @if(session('success'))
+            <div>{{ session('success') }}</div>
+        @endif
 
-    <form action="{{ route('menu.update.category', $category->id) }}" method="POST">
-        @csrf
-        @method('PUT')
-        <label for="title">Название категории:</label>
-        <input type="text" name="title" id="title" value="{{ $category->title }}" required>
-        <button type="submit">Обновить</button>
-    </form>
+        <form action="{{ route('menu.update.category', $category->id) }}" method="POST">
+            @csrf
+            @method('PUT')
+            <label for="title">Название категории:</label>
+            <input type="text" name="title" id="title" value="{{ $category->title }}" required>
+            <button type="submit">Обновить</button>
+        </form>
+        <a href="/account">Back</a>
+</div>
 @endsection

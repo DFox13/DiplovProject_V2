@@ -22,4 +22,5 @@
 
         <button type="submit">Добавить</button>
     </form>
+    <a href="/account">Back</a>
 @endsection

@@ -1,7 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-<h1>Редактировать подпункт</h1>
+<div class="wrapper">
+    <h1>Редактировать подпункт</h1>
 
     @if(session('success'))
         <div>{{ session('success') }}</div>
@@ -24,4 +25,6 @@
 
         <button type="submit">Обновить</button>
     </form>
+    <a href="/account">Back</a>
+</div>
 @endsection

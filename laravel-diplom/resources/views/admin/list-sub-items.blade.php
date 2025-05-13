@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="wrapper">
 <h1>Список подпунктов</h1>
 
     <a href="{{ route('menu.add.sub-item') }}">Добавить подпункт</a>
@@ -18,4 +19,6 @@
             </li>
         @endforeach
     </ul>
+    <a href="/account">Back</a>
+</div>
 @endsection

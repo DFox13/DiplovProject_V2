@@ -10,7 +10,7 @@
     <script src="/public/assets/js/scriptHeader.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.23.3/dist/js/uikit.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/uikit@3.23.3/dist/js/uikit-icons.min.js"></script>    
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.23.3/dist/js/uikit-icons.min.js"></script> 
     </head>
 <body>
     
@@ -31,9 +31,9 @@
             
                 
                 @if (Auth::check())
-                <a href="/account">{{ Auth::user()->name }}</a>
+                <a href="/account" class="btn-head ">{{ Auth::user()->name }}</a>
                     @else
-                        <a href="/auth">Log in</a>
+                        <a href="/auth" class="btn-head ">Авторизироваться</a>
                     @endif
                 
             </div>
