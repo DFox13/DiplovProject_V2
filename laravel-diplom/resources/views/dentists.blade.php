@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-        <div class="content-doctors">
+        <div class="content-doctors content">
                 <h2>Наши Врачи</h2>
                 <div class="list_doctors">
                 </div>

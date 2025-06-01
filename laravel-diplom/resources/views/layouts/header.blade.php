@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title id="valuePage"></title>
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="fontawesome-free-6.6.0-web/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.23.3/dist/css/uikit.min.css" />
-    <script src="/public/assets/js/scriptHeader.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.23.3/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.23.3/dist/js/uikit-icons.min.js"></script> 
@@ -45,7 +44,7 @@
                 </div>
             </div>
         </div>
-        <div class="menu-button" id="menuButton">☰ <span id="valuePage"></span>  </div>
+        <div class="menu-button" id="menuButton">☰ <span id="valuePageMenu"> </span></div>
         <div class="nav" id="navbar">
             <a href="/">Главная</a>
             <a href="/services">Услуги</a>
@@ -57,4 +56,3 @@
         </div>
         <button id="scrollToTop" style="display: none;">Вверх <i class="fa-solid fa-arrow-up"></i></button>
     
-    <script src="/assets/js/scriptHeader.js"></script>
