@@ -7,6 +7,7 @@ use App\Models\MainMenuItems;
 use App\Models\SubMenuItems;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class MenuController extends Controller
 {
@@ -19,9 +20,21 @@ class MenuController extends Controller
     {
         $request->validate([
             'title' => 'required|string|max:255',
+            'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'show_on_home' => $request->has('show_on_home'),
+            'show_on_services' => $request->has('show_on_services'),
+            'show_on_dentists' => $request->has('show_on_dentists'),
         ]);
 
-        $category = MainMenuItems::create(['title' => $request->title]);
+        $imagePath = null;
+        if ($request->hasFile('image')) {
+            $imagePath = $request->file('image')->store('images', 'public');
+        }
+
+        $category = MainMenuItems::create([
+            'title' => $request->title,
+            'image' => $imagePath,
+        ]);
 
         dispatch(new SendNotificationJob(
             Auth::user(),
@@ -62,12 +75,28 @@ class MenuController extends Controller
     {
         $request->validate([
             'title' => 'required|string|max:255',
+            'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048', 
         ]);
 
         $category = MainMenuItems::findOrFail($id);
-        $category->update(['title' => $request->title]);
+        $imagePath = $category->image;
 
-        return redirect()->route('menu.add.category')->with('success', 'Категория успешно обновлена.');
+        if ($request->hasFile('image')) {
+            if ($category->image) {
+                Storage::disk('public')->delete($category->image);
+            }
+            $imagePath = $request->file('image')->store('images', 'public');
+        }
+
+        $category->update([
+            'title' => $request->title,
+            'image' => $imagePath,
+            'show_on_home' => $request->has('show_on_home'),
+            'show_on_services' => $request->has('show_on_services'),
+            'show_on_dentists' => $request->has('show_on_dentists'),
+        ]);
+
+        return redirect()->route('menu.list.categories')->with('success', 'Категория обновлена!');
     }
     public function uploadForm()
     {
@@ -165,6 +194,11 @@ class MenuController extends Controller
     {
         $categories = MainMenuItems::with('subMenuItems')->get();
         return view('admin.list-categories', compact('categories'));
+    }
+    
+    public function getCategoryTitlesHome(){
+        $categories = MainMenuItems::with('subMenuItems')->get();
+        return view('home', compact('categories'));
     }
 
     public function getCategoryTitles()

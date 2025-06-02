@@ -87,3 +87,14 @@ scrollToTopButton.onclick = function() {
   });
 };
 
+// services
+$(document).ready(function() {
+    $('.lazyloaded').hover(
+        function() {
+            $(this).find('.sub-menu').stop(true, true).slideDown();
+        }, 
+        function() {
+            $(this).find('.sub-menu').stop(true, true).slideUp();
+        }
+    );
+});

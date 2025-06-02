@@ -4,7 +4,7 @@
   margin: 0 auto;
 }
 .content{
-  max-width: 1730px;
+  max-width: 1480px;
   width: 100%;
   margin: 0 auto;
 }
@@ -267,4 +267,1998 @@
   font-size: 17px;
   letter-spacing: .51px;
   font-weight: 500;
+}
+
+/* Стили из Pasted_Text_1748790312582.txt */
+
+.services_list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.one_service {
+  float: left;
+  width: 23%;
+  margin: 0 30px 20px 0;
+}
+
+.one_service_right {
+  margin-right: 0;
+}
+
+.in_service {
+  padding: 10px;
+  width: 100%;
+  transition: .5s;
+  padding: 10px;
+}
+
+.one_service:hover .in_service {
+  position: absolute;
+  z-index: 2;
+  background-color: #fff;
+  padding: 8px;
+  height: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  animation: borderview .5s;
+}
+
+.one_service .img {
+  margin: 0;
+  overflow: hidden;
+  max-height: 180px;
+}
+
+.one_service .img img {
+  border-radius: 4px 4px 0 0;
+}
+
+.one_service .img img:hover {
+  transform: scale(1.05, 1.05);
+}
+
+.one_service .name {
+  font-size: 19px;
+  margin: 11px 0 7px;
+  line-height: 18pt;
+}
+
+.one_service .name a {
+  border-bottom: 1px solid #0c8084;
+}
+
+.one_service .name a:hover {
+  border-bottom: none;
+}
+
+.one_service ul {
+  display: none;
+}
+
+.one_service:hover ul {
+  display: block;
+}
+
+.one_service ul li a {
+  color: #4d4e4f;
+  font-family: Gotham;
+  text-decoration: none;
+  font-size: 13px;
+  display: inline-block;
+  letter-spacing: .39px;
+  padding: 10px 30px;
+}
+
+.one_service ul li a:hover {
+  color: #0f2a00;
+}
+
+.clear_mobile {
+  clear: both;
+  display: block;
+}
+
+
+.one_service_double {
+  float: right;
+}
+
+.one_service_double .one_service_right {
+  margin-right: 0;
+}
+
+.one_service p.text {
+  font-family: Gotham;
+  font-style: italic;
+  margin-top: 10px;
+  line-height: 15pt;
+}
+
+.one_service .text {
+  font-family: Gotham;
+  font-style: italic;
+  margin-top: 10px;
+  line-height: 15pt;
+}
+
+.one_service .button_service {
+  padding: 35px 0 20px;
+}
+
+.one_service .button_service a {
+  color: #fff;
+}
+
+.one_service .button_service a:before {
+  content: '+ ';
+  color: #ffe683;
+  transition: 1s;
+}
+
+.one_service:hover .button_service a:before {
+  content: '+ ';
+  color: #f5b437;
+}
+
+.one_service:hover .button_service {
+  background-color: #0c8084;
+}
+
+/* Стили из Pasted_Text_1748790271978.txt */
+
+.one_service {
+  float: left;
+  width: 290px;
+  margin: 0 10px 0 0;
+  position: relative;
+  height: auto;
+  min-height: 1px;
+}
+
+.one_service ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.one_service ul li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  border-bottom: 1px solid #0c8084;
+}
+
+.one_service ul li a {
+  color: #4d4e4f;
+  font-family: Gotham;
+  text-decoration: none;
+  font-size: 13px;
+  display: inline-block;
+  letter-spacing: .39px;
+  padding: 10px 30px;
+}
+
+.one_service ul li a:hover {
+  color: #0f2a00;
+}
+
+.one_service p.img {
+  margin: 0;
+  overflow: hidden;
+}
+
+.one_service p.img img {
+  height: 218px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.one_service p.img img:hover {
+  transform: scale(1.05, 1.05);
+}
+
+.one_service p.name {
+  text-align: center;
+  margin: 10px 0 0;
+}
+
+.one_service p.name a {
+  color: #fff;
+  padding: 10px;
+  text-decoration: none;
+  background-color: #0c8084;
+  display: block;
+}
+
+.one_service:hover p.name a {
+  color: #fff;
+  background-color: #0c8084;
+}
+
+.one_service p.name a:hover {
+  color: #fff;
+  background-color: #0c8084;
+}
+
+a {
+  color: #0c8084;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #f66200;
+  text-decoration: none;
+}
+
+/* Дополнительные стили из Pasted_Text_1748790271978.txt */
+
+.problem_block .left .post_one {
+  padding: 1px 20px 1px 70px;
+  font-style: italic;
+  font-family: Gotham;
+  transition: 1s;
+  border-radius: 7px;
+  margin-top: 10px;
+}
+
+.problem_block .left .post_one:hover {
+  background-color: #fcfbe2;
+}
+
+.problem_block .right {
+  float: right;
+  width: 37%;
+  text-align: center;
+}
+
+.problem_block .right img {
+  border-radius: 100%;
+  -webkit-filter: contrast(102%);
+  border: 8px solid #f6f6f6;
+  max-width: 366px;
+}
+
+.list_problem .one_problem {
+  float: left;
+  width: 30%;
+  margin: 20px 20px 20px 0;
+  font-size: 18px;
+}
+
+.list_problem .one_problem img {
+  float: left;
+  margin: 0 10px 5px 0;
+  opacity: .6;
+  transition: 1s;
+}
+
+.list_problem .one_problem:hover img {
+  opacity: 1;
+}
+
+.one_service_double {
+  float: right;
+}
+
+.one_service_double .one_service_right {
+  margin-right: 0;
+}
+
+/* Стили из Pasted_Text_1748790603037.txt */
+
+.one_service {
+  float: left;
+  width: 290px;
+  margin: 0 10px 0 0;
+  position: relative;
+  height: auto;
+  min-height: 1px;
+}
+
+.one_service ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.one_service ul li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  border-bottom: 1px solid #0c8084;
+}
+
+.one_service ul li a {
+  color: #4d4e4f;
+  font-family: Gotham;
+  text-decoration: none;
+  font-size: 13px;
+  display: inline-block;
+  letter-spacing: .39px;
+  padding: 10px 30px;
+}
+
+.one_service ul li a:hover {
+  color: #0f2a00;
+}
+
+.one_service p.img {
+  margin: 0;
+  overflow: hidden;
+}
+
+.one_service p.img img {
+  height: 218px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.one_service p.img img:hover {
+  transform: scale(1.05, 1.05);
+}
+
+.one_service p.name {
+  text-align: center;
+  margin: 10px 0 0;
+}
+
+.one_service p.name a {
+  color: #fff;
+  padding: 10px;
+  text-decoration: none;
+  background-color: #0c8084;
+  display: block;
+}
+
+.one_service:hover p.name a {
+  color: #fff;
+  background-color: #0c8084;
+}
+
+.one_service p.name a:hover {
+  color: #fff;
+  background-color: #0c8084;
+}
+
+.one_service .in_service {
+  padding: 10px;
+  width: 100%;
+  transition: .5s;
+  padding: 10px;
+}
+
+.one_service:hover .in_service {
+  position: absolute;
+  z-index: 2;
+  background-color: #fff;
+  padding: 8px;
+  height: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  animation: borderview .5s;
+}
+
+.one_service .img {
+  margin: 0;
+  overflow: hidden;
+  max-height: 180px;
+}
+
+.one_service .img img {
+  border-radius: 4px 4px 0 0;
+}
+
+.one_service .img img:hover {
+  transform: scale(1.05, 1.05);
+}
+
+.one_service .name {
+  font-size: 19px;
+  margin: 11px 0 7px;
+  line-height: 18pt;
+}
+
+.one_service .name a {
+  border-bottom: 1px solid #0c8084;
+}
+
+.one_service .name a:hover {
+  border-bottom: none;
+}
+
+.one_service_double {
+  float: right;
+}
+
+.one_service_double .one_service_right {
+  margin-right: 0;
+}
+
+.one_service p.text {
+  font-family: Gotham;
+  font-style: italic;
+  margin-top: 10px;
+  line-height: 15pt;
+}
+
+.one_service .text {
+  font-family: Gotham;
+  font-style: italic;
+  margin-top: 10px;
+  line-height: 15pt;
+}
+
+.one_service .button_service {
+  padding: 35px 0 20px;
+}
+
+.one_service .button_service a {
+  color: #fff;
+}
+
+.one_service .button_service a:before {
+  content: '+ ';
+  color: #ffe683;
+  transition: 1s;
+}
+
+.one_service:hover .button_service a:before {
+  content: '+ ';
+  color: #f5b437;
+}
+
+.one_service:hover .button_service {
+  background-color: #0c8084;
+}
+
+
+.one_service_double {
+  float: right;
+}
+
+.one_service_double .one_service_right {
+  margin-right: 0;
+}
+
+.one_service p.text {
+  font-family: Gotham;
+  font-style: italic;
+  margin-top: 10px;
+  line-height: 15pt;
+}
+
+.one_service .text {
+  font-family: Gotham;
+  font-style: italic;
+  margin-top: 10px;
+  line-height: 15pt;
+}
+
+.one_service .button_service {
+  padding: 35px 0 20px;
+}
+
+.one_service .button_service a {
+  color: #fff;
+}
+
+.one_service .button_service a:before {
+  content: '+ ';
+  color: #ffe683;
+  transition: 1s;
+}
+
+.one_service:hover .button_service a:before {
+  content: '+ ';
+  color: #f5b437;
+}
+
+.one_service:hover .button_service {
+  background-color: #0c8084;
+}
+
+
+/* Дополнительные стили из Pasted_Text_1748790603037.txt */
+
+.one_service_double {
+  float: right;
+}
+
+.one_service_double .one_service_right {
+  margin-right: 0;
+}
+
+.one_service p.text {
+  font-family: Gotham;
+  font-style: italic;
+  margin-top: 10px;
+  line-height: 15pt;
+}
+
+.one_service .text {
+  font-family: Gotham;
+  font-style: italic;
+  margin-top: 10px;
+  line-height: 15pt;
+}
+
+.one_service .button_service {
+  padding: 35px 0 20px;
+}
+
+.one_service .button_service a {
+  color: #fff;
+}
+
+.one_service .button_service a:before {
+  content: '+ ';
+  color: #ffe683;
+  transition: 1s;
+}
+
+.one_service:hover .button_service a:before {
+  content: '+ ';
+  color: #f5b437;
+}
+
+.one_service:hover .button_service {
+  background-color: #0c8084;
+}
+
+
+Конечно! Вот все стили, связанные с классами из предоставленных файлов, объединённые в один код:
+
+```css
+/* Стили из Pasted_Text_1748790312582.txt */
+
+.one_service {
+    float: left;
+    width: 23%;
+    margin: 0 30px 20px 0;
+}
+
+.one_service_right {
+    margin-right: 0;
+}
+
+.in_service {
+    padding: 10px;
+    width: 100%;
+    transition: .5s;
+    padding: 10px;
+}
+
+.one_service:hover .in_service {
+    position: absolute;
+    z-index: 2;
+    background-color: #fff;
+    padding: 8px;
+    height: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    animation: borderview .5s;
+}
+
+.one_service .img {
+    margin: 0;
+    overflow: hidden;
+    max-height: 180px;
+}
+
+.one_service .img img {
+    border-radius: 4px 4px 0 0;
+}
+
+.one_service .img img:hover {
+    transform: scale(1.05, 1.05);
+}
+
+.one_service .name {
+    font-size: 19px;
+    margin: 11px 0 7px;
+    line-height: 18pt;
+}
+
+.one_service .name a {
+    border-bottom: 1px solid #0c8084;
+}
+
+.one_service .name a:hover {
+    border-bottom: none;
+}
+
+.one_service ul {
+    display: none;
+}
+
+.one_service:hover ul {
+    display: block;
+}
+
+.one_service ul li a {
+    color: #4d4e4f;
+    font-family: Gotham;
+    text-decoration: none;
+    font-size: 13px;
+    display: inline-block;
+    letter-spacing: .39px;
+    padding: 10px 30px;
+}
+
+.one_service ul li a:hover {
+    color: #0f2a00;
+}
+
+.clear_mobile {
+    clear: both;
+    display: block;
+}
+
+.one_whyme {
+    display: flex;
+    align-items: flex-start;
+    gap: 0 15px;
+}
+
+.one_whyme_right {
+    float: right;
+}
+
+.right_whyme {
+    background-color: #fff;
+}
+
+.right_whyme .post_one {
+    max-width: 80%;
+    padding: 1px 10px 0 20px;
+    margin-top: 30px;
+}
+
+.right_whyme .post_one p {
+    font-size: 15px;
+    color: #4d4e4f;
+    line-height: 180%;
+    letter-spacing: .45px;
+    font-weight: 500;
+}
+
+.right_whyme .post_one a {
+    color: #0c8084;
+    font-weight: 700;
+}
+
+.list_whyme {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px 0;
+}
+
+.left_whyme .one_whyme {
+    width: 45%;
+    flex: 0 0 auto;
+    display: flex;
+    align-items: flex-start;
+    gap: 0 15px;
+}
+
+.left_whyme .one_whyme img {
+    max-width: 45px;
+}
+
+.left_whyme .one_whyme p {
+    color: #4d4e4f;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: .45px;
+}
+
+.left_whyme .one_whyme p span {
+    font-size: 17px;
+    color: #073234;
+    letter-spacing: .51px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+/* Стили из Pasted_Text_1748790271978.txt */
+
+.one_service {
+    float: left;
+    width: 290px;
+    margin: 0 10px 0 0;
+    position: relative;
+    height: auto;
+    min-height: 1px;
+}
+
+.one_service_double {
+    float: right;
+}
+
+.one_service_double .one_service_right {
+    margin-right: 0;
+}
+
+.one_service .in_service {
+    padding: 10px;
+    width: 100%;
+    transition: .5s;
+    padding: 10px;
+}
+
+.one_service:hover .in_service {
+    position: absolute;
+    z-index: 2;
+    background-color: #fff;
+    padding: 8px;
+    height: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    animation: borderview .5s;
+}
+
+.one_service .img {
+    margin: 0;
+    overflow: hidden;
+    max-height: 180px;
+}
+
+.one_service .img img {
+    border-radius: 4px 4px 0 0;
+}
+
+.one_service .img img:hover {
+    transform: scale(1.05, 1.05);
+}
+
+.one_service .name {
+    font-size: 19px;
+    margin: 11px 0 7px;
+    line-height: 18pt;
+}
+
+.one_service .name a {
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    background-color: #0c8084;
+    display: block;
+}
+
+.one_service:hover .name a {
+    color: #fff;
+    background-color: #0c8084;
+}
+
+.one_service .name a:hover {
+    color: #fff;
+    background-color: #0c8084;
+}
+
+.one_service ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.one_service:hover ul {
+    display: block;
+}
+
+.one_service ul li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    border-bottom: 1px solid #0c8084;
+}
+
+.one_service ul li a {
+    color: #4d4e4f;
+    font-family: Gotham;
+    text-decoration: none;
+    font-size: 13px;
+    display: inline-block;
+    letter-spacing: .39px;
+    padding: 10px 30px;
+}
+
+.one_service ul li a:hover {
+    color: #0f2a00;
+}
+
+.one_service .text {
+    font-family: Gotham;
+    font-style: italic;
+    margin-top: 10px;
+    line-height: 15pt;
+}
+
+.one_service .button_service {
+    padding: 35px 0 20px;
+}
+
+.one_service .button_service a {
+    color: #fff;
+}
+
+.one_service .button_service a:before {
+    content: '+ ';
+    color: #ffe683;
+    transition: 1s;
+}
+
+.one_service:hover .button_service a:before {
+    content: '+ ';
+    color: #f5b437;
+}
+
+.one_service:hover .button_service {
+    background-color: #0c8084;
+}
+
+/* Стили из Pasted_Text_1748790603037.txt */
+
+.one_service {
+    float: left;
+    width: 290px;
+    margin: 0 10px 0 0;
+    position: relative;
+    height: auto;
+    min-height: 1px;
+}
+
+.one_service_double {
+    float: right;
+}
+
+.one_service_double .one_service_right {
+    margin-right: 0;
+}
+
+.one_service .in_service {
+    padding: 10px;
+    width: 100%;
+    transition: .5s;
+    padding: 10px;
+}
+
+.one_service:hover .in_service {
+    position: absolute;
+    z-index: 2;
+    background-color: #fff;
+    padding: 8px;
+    height: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    animation: borderview .5s;
+}
+
+.one_service .img {
+    margin: 0;
+    overflow: hidden;
+    max-height: 180px;
+}
+
+.one_service .img img {
+    border-radius: 4px 4px 0 0;
+}
+
+.one_service .img img:hover {
+    transform: scale(1.05, 1.05);
+}
+
+.one_service .name {
+    font-size: 19px;
+    margin: 11px 0 7px;
+    line-height: 18pt;
+}
+
+.one_service .name a {
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    background-color: #0c8084;
+    display: block;
+}
+
+.one_service:hover .name a {
+    color: #fff;
+    background-color: #0c8084;
+}
+
+.one_service .name a:hover {
+    color: #fff;
+    background-color: #0c8084;
+}
+
+.one_service ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.one_service:hover ul {
+    display: block;
+}
+
+.one_service ul li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    border-bottom: 1px solid #0c8084;
+}
+
+.one_service ul li a {
+    color: #4d4e4f;
+    font-family: Gotham;
+    text-decoration: none;
+    font-size: 13px;
+    display: inline-block;
+    letter-spacing: .39px;
+    padding: 10px 30px;
+}
+
+.one_service ul li a:hover {
+    color: #0f2a00;
+}
+
+.one_service .text {
+    font-family: Gotham;
+    font-style: italic;
+    margin-top: 10px;
+    line-height: 15pt;
+}
+
+.one_service .button_service {
+    padding: 35px 0 20px;
+}
+
+.one_service .button_service a {
+    color: #fff;
+}
+
+.one_service .button_service a:before {
+    content: '+ ';
+    color: #ffe683;
+    transition: 1s;
+}
+
+.one_service:hover .button_service a:before {
+    content: '+ ';
+    color: #f5b437;
+}
+
+.one_service:hover .button_service {
+    background-color: #0c8084;
+}
+
+/* Дополнительные стили из Pasted_Text_1748790603037.txt */
+
+.one_whyme {
+    display: flex;
+    align-items: flex-start;
+    gap: 0 15px;
+}
+
+.one_whyme_right {
+    float: right;
+}
+
+.right_whyme {
+    background-color: #fff;
+}
+
+.right_whyme .post_one {
+    max-width: 80%;
+    padding: 1px 10px 0 20px;
+    margin-top: 30px;
+}
+
+.right_whyme .post_one p {
+    font-size: 15px;
+    color: #4d4e4f;
+    line-height: 180%;
+    letter-spacing: .45px;
+    font-weight: 500;
+}
+
+.right_whyme .post_one a {
+    color: #0c8084;
+    font-weight: 700;
+}
+
+.list_whyme {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px 0;
+}
+
+.left_whyme .one_whyme {
+    width: 45%;
+    flex: 0 0 auto;
+    display: flex;
+    align-items: flex-start;
+    gap: 0 15px;
+}
+
+.left_whyme .one_whyme img {
+    max-width: 45px;
+}
+
+.left_whyme .one_whyme p {
+    color: #4d4e4f;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: .45px;
+}
+
+.left_whyme .one_whyme p span {
+    font-size: 17px;
+    color: #073234;
+    letter-spacing: .51px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.clear_mobile {
+    clear: both;
+    display: block;
+}
+
+/* Общие стили */
+
+.center {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+@media only screen and (max-width: 640px) {
+    .center {
+        width: 92%;
+        margin: 0 auto;
+        min-width: 92%;
+        max-width: 92%;
+    }
+}
+
+.h2 {
+    font-family: Gotham;
+    font-size: 40px;
+    font-weight: 400;
+    color: #0c8084;
+    padding-bottom: 20px;
+    line-height: 24pt;
+    max-width: 70%;
+}
+
+.services_list {
+    padding-top: 10px;
+}
+
+.one_service {
+    float: left;
+    width: 290px;
+    margin: 0 10px 0 0;
+    position: relative;
+    height: auto;
+    min-height: 1px;
+}
+
+.one_service_double {
+    float: right;
+}
+
+.one_service_double .one_service_right {
+    margin-right: 0;
+}
+
+.one_service .in_service {
+    padding: 10px;
+    width: 100%;
+    transition: .5s;
+    padding: 10px;
+}
+
+.one_service:hover .in_service {
+    position: absolute;
+    z-index: 2;
+    background-color: #fff;
+    padding: 8px;
+    height: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    animation: borderview .5s;
+}
+
+.one_service .img {
+    margin: 0;
+    overflow: hidden;
+    max-height: 180px;
+}
+
+.one_service .img img {
+    border-radius: 4px 4px 0 0;
+}
+
+.one_service .img img:hover {
+    transform: scale(1.05, 1.05);
+}
+
+.one_service .name {
+    font-size: 19px;
+    margin: 11px 0 7px;
+    line-height: 18pt;
+}
+
+.one_service .name a {
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    background-color: #0c8084;
+    display: block;
+}
+
+.one_service:hover .name a {
+    color: #fff;
+    background-color: #0c8084;
+}
+
+.one_service .name a:hover {
+    color: #fff;
+    background-color: #0c8084;
+}
+
+.one_service ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.one_service:hover ul {
+    display: block;
+}
+
+.one_service ul li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    border-bottom: 1px solid #0c8084;
+}
+
+.one_service ul li a {
+    color: #4d4e4f;
+    font-family: Gotham;
+    text-decoration: none;
+    font-size: 13px;
+    display: inline-block;
+    letter-spacing: .39px;
+    padding: 10px 30px;
+}
+
+.one_service ul li a:hover {
+    color: #0f2a00;
+}
+
+.one_service .text {
+    font-family: Gotham;
+    font-style: italic;
+    margin-top: 10px;
+    line-height: 15pt;
+}
+
+.one_service .button_service {
+    padding: 35px 0 20px;
+}
+
+.one_service .button_service a {
+    color: #fff;
+}
+
+.one_service .button_service a:before {
+    content: '+ ';
+    color: #ffe683;
+    transition: 1s;
+}
+
+.one_service:hover .button_service a:before {
+    content: '+ ';
+    color: #f5b437;
+}
+
+.one_service:hover .button_service {
+    background-color: #0c8084;
+}
+
+.one_whyme {
+    display: flex;
+    align-items: flex-start;
+    gap: 0 15px;
+}
+
+.one_whyme_right {
+    float: right;
+}
+
+.right_whyme {
+    background-color: #fff;
+}
+
+.right_whyme .post_one {
+    max-width: 80%;
+    padding: 1px 10px 0 20px;
+    margin-top: 30px;
+}
+
+.right_whyme .post_one p {
+    font-size: 15px;
+    color: #4d4e4f;
+    line-height: 180%;
+    letter-spacing: .45px;
+    font-weight: 500;
+}
+
+.right_whyme .post_one a {
+    color: #0c8084;
+    font-weight: 700;
+}
+
+.list_whyme {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px 0;
+}
+
+.left_whyme .one_whyme {
+    width: 45%;
+    flex: 0 0 auto;
+    display: flex;
+    align-items: flex-start;
+    gap: 0 15px;
+}
+
+.left_whyme .one_whyme img {
+    max-width: 45px;
+}
+
+.left_whyme .one_whyme p {
+    color: #4d4e4f;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: .45px;
+}
+
+.left_whyme .one_whyme p span {
+    font-size: 17px;
+    color: #073234;
+    letter-spacing: .51px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.clear_mobile {
+    clear: both;
+    display: block;
+}
+
+/* Дополнительные общие стили */
+
+#why_me .left_whyme h2:first-child,
+#why_me .left_whyme p.h2:first-child {
+    color: #0c8084;
+    margin-bottom: 40px;
+    font-size: 40px;
+    max-width: 432px;
+}
+
+#why_me .left_whyme {
+    width: 60%;
+    flex: 0 0 auto;
+}
+
+@media only screen and (max-width: 640px) {
+    #why_me .left_whyme {
+        float: none;
+        width: 100%;
+        margin: 0 0 13px;
+        clear: both;
+    }
+}
+
+#why_me .right_whyme {
+    width: 37%;
+    flex: 0 0 auto;
+}
+
+@media only screen and (max-width: 640px) {
+    #why_me .right_whyme {
+        float: none;
+        width: 100%;
+        background-color: #fff;
+    }
+}
+
+#why_me .right_whyme .post_one {
+    max-width: 80%;
+}
+
+@media only screen and (max-width: 640px) {
+    #why_me .right_whyme .post_one {
+        max-width: 100%;
+        padding: 0 0 0 20px;
+        margin-top: 30px;
+    }
+}
+
+#why_me .right_whyme .post_one p {
+    font-size: 15px;
+    color: #4d4e4f;
+    line-height: 180%;
+    letter-spacing: .45px;
+    font-weight: 500;
+}
+
+#why_me .right_whyme .post_one a {
+    color: #0c8084;
+    font-weight: 700;
+}
+
+#why_me .list_whyme {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px 0;
+}
+
+#why_me .left_whyme .one_whyme {
+    width: 45%;
+    flex: 0 0 auto;
+    display: flex;
+    align-items: flex-start;
+    gap: 0 15px;
+}
+
+#why_me .left_whyme .one_whyme img {
+    max-width: 45px;
+}
+
+#why_me .left_whyme .one_whyme p {
+    color: #4d4e4f;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: .45px;
+}
+
+#why_me .left_whyme .one_whyme p span {
+    font-size: 17px;
+    color: #073234;
+    letter-spacing: .51px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+#why_me .left_whyme .one_whyme_right {
+    margin-right: 0;
+}
+
+#why_me .right_whyme {
+    background-color: #fff;
+}
+
+#why_me .right_whyme .post_one {
+    max-width: 80%;
+    padding: 1px 10px 0 20px;
+    margin-top: 30px;
+}
+
+#why_me .right_whyme .post_one p {
+    font-size: 15px;
+    color: #4d4e4f;
+    line-height: 180%;
+    letter-spacing: .45px;
+    font-weight: 500;
+}
+
+#why_me .right_whyme .post_one a {
+    color: #0c8084;
+    font-weight: 700;
+}
+
+#why_me .list_whyme {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px 0;
+}
+
+#why_me .left_whyme .one_whyme {
+    width: 45%;
+    flex: 0 0 auto;
+    display: flex;
+    align-items: flex-start;
+    gap: 0 15px;
+}
+
+#why_me .left_whyme .one_whyme img {
+    max-width: 45px;
+}
+
+#why_me .left_whyme .one_whyme p {
+    color: #4d4e4f;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: .45px;
+}
+
+#why_me .left_whyme .one_whyme p span {
+    font-size: 17px;
+    color: #073234;
+    letter-spacing: .51px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+#why_me .left_whyme .one_whyme_right {
+    margin-right: 0;
+}
+
+#why_me .right_whyme {
+    background-color: #fff;
+}
+
+#why_me .right_whyme .post_one {
+    max-width: 80%;
+    padding: 1px 10px 0 20px;
+    margin-top: 30px;
+}
+
+#why_me .right_whyme .post_one p {
+    font-size: 15px;
+    color: #4d4e4f;
+    line-height: 180%;
+    letter-spacing: .45px;
+    font-weight: 500;
+}
+
+#why_me .right_whyme .post_one a {
+    color: #0c8084;
+    font-weight: 700;
+}
+
+/* Дополнительные стили */
+
+.fotorama__arr {
+    /* Стили для стрелок слайдера */
+}
+
+.fotorama__video-close {
+    /* Стили для закрытия видео в слайдере */
+}
+
+.fotorama__arr--prev {
+    /* Стили для предыдущей стрелки слайдера */
+}
+
+.fotorama__arr--next {
+    /* Стили для следующей стрелки слайдера */
+}
+
+.fotorama__arr--disabled {
+    /* Стили для отключённых стрелок слайдера */
+}
+
+.fotorama__video-close {
+    /* Стили для закрытия видео в слайдере */
+}
+
+a {
+    color: #0c8084;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #f66200;
+    text-decoration: none;
+}
+
+/* Дополнительные стили из Pasted_Text_1748790271978.txt */
+
+#services {
+    padding: 10px 0;
+    background: url(//www.cstom.ru/wp-content/themes/cstom/images/bg_services.jpg) top center no-repeat;
+}
+
+#services p.h2 {
+    text-align: center;
+}
+
+#services .services_list .one_service {
+    float: left;
+    width: 290px;
+    margin: 0 10px 0 0;
+    position: relative;
+    height: auto;
+    min-height: 1px;
+}
+
+#services .services_list .one_service .in_service {
+    padding: 10px;
+    width: 100%;
+    transition: .5s;
+    padding: 10px;
+}
+
+#services .services_list .one_service:hover .in_service {
+    position: absolute;
+    z-index: 2;
+    background-color: #fff;
+    padding: 8px;
+    height: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    animation: borderview .5s;
+}
+
+#services .services_list .one_service ul {
+    display: none;
+}
+
+#services .services_list .one_service:hover ul {
+    display: block;
+}
+
+#services .services_list .one_service_right {
+    margin-right: 0;
+}
+
+#services .services_list .one_service p.img {
+    margin: 0;
+    overflow: hidden;
+}
+
+#services .services_list .one_service p.img img {
+    height: 218px;
+    width: 100%;
+    object-fit: cover;
+}
+
+#services .services_list .one_service p.img img:hover {
+    transform: scale(1.05, 1.05);
+}
+
+#services .services_list .one_service p.name {
+    text-align: center;
+    margin: 10px 0 0;
+}
+
+#services .services_list .one_service p.name a {
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    background-color: #0c8084;
+    display: block;
+}
+
+#services .services_list .one_service:hover p.name a,
+#services .services_list .one_service p.name a:hover {
+    color: #fff;
+    background-color: #0c8084;
+}
+
+#services .services_list .one_service ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+#services .services_list .one_service ul li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    border-bottom: 1px solid #0c8084;
+}
+
+#services .services_list .one_service ul li a {
+    color: #4d4e4f;
+    font-family: Gotham;
+    text-decoration: none;
+    font-size: 13px;
+    display: inline-block;
+    letter-spacing: .39px;
+    padding: 10px 30px;
+}
+
+#services .services_list .one_service ul li a:hover {
+    color: #0f2a00;
+}
+
+#why_me {
+    padding: 45px 0 0;
+    position: relative;
+    margin: 120px 0;
+}
+
+#why_me .center_for_btn {
+    transform: translateY(92px);
+}
+
+#why_me:before {
+    content: '';
+    height: 100%;
+    width: 58%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#why_me .right_whyme {
+    background-color: #fff;
+}
+
+#why_me .left_whyme .one_whyme {
+    width: 45%;
+    flex: 0 0 auto;
+    display: flex;
+    align-items: flex-start;
+    gap: 0 15px;
+}
+
+#why_me .left_whyme .one_whyme img {
+    max-width: 45px;
+}
+
+#why_me .left_whyme .one_whyme p {
+    color: #4d4e4f;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: .45px;
+}
+
+#why_me .left_whyme .one_whyme p span {
+    line-height: 16pt;
+}
+
+#why_me .right_whyme .post_one {
+    max-width: 80%;
+    padding: 1px 10px 0 20px;
+    margin-top: 30px;
+}
+
+#why_me .right_whyme .post_one p {
+    font-size: 15px;
+    color: #4d4e4f;
+    line-height: 180%;
+    letter-spacing: .45px;
+    font-weight: 500;
+}
+
+#why_me .right_whyme .post_one a {
+    color: #0c8084;
+    font-weight: 700;
+}
+
+#why_me .list_whyme {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px 0;
+}
+
+#why_me .left_whyme .one_whyme {
+    width: 45%;
+    flex: 0 0 auto;
+    display: flex;
+    align-items: flex-start;
+    gap: 0 15px;
+}
+
+#why_me .left_whyme .one_whyme img {
+    max-width: 45px;
+}
+
+#why_me .left_whyme .one_whyme p {
+    color: #4d4e4f;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: .45px;
+}
+
+#why_me .left_whyme .one_whyme p span {
+    font-size: 17px;
+    color: #073234;
+    letter-spacing: .51px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+#why_me .left_whyme .one_whyme_right {
+    margin-right: 0;
+}
+
+#why_me .right_whyme {
+    background-color: #fff;
+}
+
+#why_me .right_whyme .post_one {
+    max-width: 80%;
+    padding: 1px 10px 0 20px;
+    margin-top: 30px;
+}
+
+#why_me .right_whyme .post_one p {
+    font-size: 15px;
+    color: #4d4e4f;
+    line-height: 180%;
+    letter-spacing: .45px;
+    font-weight: 500;
+}
+
+#why_me .right_whyme .post_one a {
+    color: #0c8084;
+    font-weight: 700;
+}
+
+#why_me .list_whyme {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px 0;
+}
+
+#why_me .left_whyme .one_whyme {
+    width: 45%;
+    flex: 0 0 auto;
+    display: flex;
+    align-items: flex-start;
+    gap: 0 15px;
+}
+
+#why_me .left_whyme .one_whyme img {
+    max-width: 45px;
+}
+
+#why_me .left_whyme .one_whyme p {
+    color: #4d4e4f;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: .45px;
+}
+
+#why_me .left_whyme .one_whyme p span {
+    font-size: 17px;
+    color: #073234;
+    letter-spacing: .51px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+#why_me .left_whyme .one_whyme_right {
+    margin-right: 0;
+}
+
+#why_me .right_whyme {
+    background-color: #fff;
+}
+
+#why_me .right_whyme .post_one {
+    max-width: 80%;
+    padding: 1px 10px 0 20px;
+    margin-top: 30px;
+}
+
+#why_me .right_whyme .post_one p {
+    font-size: 15px;
+    color: #4d4e4f;
+    line-height: 180%;
+    letter-spacing: .45px;
+    font-weight: 500;
+}
+
+#why_me .right_whyme .post_one a {
+    color: #0c8084;
+    font-weight: 700;
+}
+
+/* Дополнительные стили из Pasted_Text_1748790271978.txt */
+
+.post_one a {
+    border-bottom: 1px solid #0f8084;
+}
+
+.post_one a:hover {
+    border: none;
+}
+
+/* Дополнительные стили из Pasted_Text_1748790603037.txt */
+
+.one_service_double {
+    float: right;
+}
+
+.one_service_double .one_service_right {
+    margin-right: 0;
+}
+
+.one_service p.text {
+    font-family: Gotham;
+    font-style: italic;
+    margin-top: 10px;
+    line-height: 15pt;
+}
+
+.one_service .text {
+    font-family: Gotham;
+    font-style: italic;
+    margin-top: 10px;
+    line-height: 15pt;
+}
+
+.one_service .button_service {
+    padding: 35px 0 20px;
+}
+
+.one_service .button_service a {
+    color: #fff;
+}
+
+.one_service .button_service a:before {
+    content: '+ ';
+    color: #ffe683;
+    transition: 1s;
+}
+
+.one_service:hover .button_service a:before {
+    content: '+ ';
+    color: #f5b437;
+}
+
+.one_service:hover .button_service {
+    background-color: #0c8084;
+}
+
+/* Дополнительные стили из Pasted_Text_1748790603037.txt */
+
+.one_service_double {
+    float: right;
+}
+
+.one_service_double .one_service_right {
+    margin-right: 0;
+}
+
+.one_service p.text {
+    font-family: Gotham;
+    font-style: italic;
+    margin-top: 10px;
+    line-height: 15pt;
+}
+
+.one_service .text {
+    font-family: Gotham;
+    font-style: italic;
+    margin-top: 10px;
+    line-height: 15pt;
+}
+
+.one_service .button_service {
+    padding: 35px 0 20px;
+}
+
+.one_service .button_service a {
+    color: #fff;
+}
+
+.one_service .button_service a:before {
+    content: '+ ';
+    color: #ffe683;
+    transition: 1s;
+}
+
+.one_service:hover .button_service a:before {
+    content: '+ ';
+    color: #f5b437;
+}
+
+.one_service:hover .button_service {
+    background-color: #0c8084;
+}
+
+/* Дополнительные стили из Pasted_Text_1748790603037.txt */
+
+.one_service_double {
+    float: right;
+}
+
+.one_service_double .one_service_right {
+    margin-right: 0;
+}
+
+.one_service p.text {
+    font-family: Gotham;
+    font-style: italic;
+    margin-top: 10px;
+    line-height: 15pt;
+}
+
+.one_service .text {
+    font-family: Gotham;
+    font-style: italic;
+    margin-top: 10px;
+    line-height: 15pt;
+}
+
+.one_service .button_service {
+    padding: 35px 0 20px;
+}
+
+.one_service .button_service a {
+    color: #fff;
+}
+
+.one_service .button_service a:before {
+    content: '+ ';
+    color: #ffe683;
+    transition: 1s;
+}
+
+.one_service:hover .button_service a:before {
+    content: '+ ';
+    color: #f5b437;
+}
+
+.one_service:hover .button_service {
+    background-color: #0c8084;
+}
+
+/* Дополнительные стили из Pasted_Text_1748790603037.txt */
+
+.one_service_double {
+    float: right;
+}
+
+.one_service_double .one_service_right {
+    margin-right: 0;
+}
+
+.one_service p.text {
+    font-family: Gotham;
+    font-style: italic;
+    margin-top: 10px;
+    line-height: 15pt;
+}
+
+.one_service .text {
+    font-family: Gotham;
+    font-style: italic;
+    margin-top: 10px;
+    line-height: 15pt;
+}
+
+.one_service .button_service {
+    padding: 35px 0 20px;
+}
+
+.one_service .button_service a {
+    color: #fff;
+}
+
+.one_service .button_service a:before {
+    content: '+ ';
+    color: #ffe683;
+    transition: 1s;
+}
+
+.one_service:hover .button_service a:before {
+    content:
 }

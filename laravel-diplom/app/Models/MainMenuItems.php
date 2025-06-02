@@ -11,6 +11,10 @@ class MainMenuItems extends Model
 
     protected $fillable = [
         'title',
+        'image',
+        'show_on_home', 
+        'show_on_services', 
+        'show_on_dentists',
     ];
 
     public function subMenuItems()
