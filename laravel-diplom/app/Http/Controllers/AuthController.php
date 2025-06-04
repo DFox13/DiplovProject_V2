@@ -46,7 +46,8 @@ class AuthController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:8|confirmed', 
-        ]);
+            'role_id'=> '3'
+        ]); 
 
         if ($validate->fails()) {
             return back()->withErrors($validate);
@@ -60,7 +61,9 @@ class AuthController extends Controller
             'password' => Hash::make($request->password),
             'role_id' => $role ? $role->id : null,
         ]);
-    
+        
+        Auth::login($user);
+        
         dispatch(new SendNotificationJob($user, 'Регистрация прошла успешно!'));
 
         return redirect('/');

@@ -18,7 +18,7 @@
     <p>Пароль</p>
     <input type="password" name="password" class="uk-input">
     <p>Повторите пароль</p>
-    <input type="password" name="confirm_password" class="uk-input">
+    <input type="password" name="password_confirmation" class="uk-input">
     <div class="btn-auth">
     <button type="submit" class="uk-button uk-button-primary" style="width: 200px;">Регистрация</button>
     <a href="/auth">Авторизация</a></br>
