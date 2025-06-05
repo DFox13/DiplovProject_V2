@@ -15,32 +15,6 @@
     </div>
 </div>
 
-<div id="services">
-    <div class="center">
-        <p class="h2">Наши услуги</p>
-        <div class="services_list">
-
-        @foreach ($categories->where('show_on_home', true) as $category)
-        <div class="one_service">
-                <div class="in_service">
-                <p class="img">
-                        <img src="{{ $category->image ? asset('storage/' . $category->image) : 'default.jpg' }}" alt="{{ $category->title }}">
-                </p>
-                        <p class="name"><a href="https://www.cstom.ru/services/osmotr">{{ $category->title }}</a></p>
-                        <ul>
-                                @foreach ($category->subMenuItems as $subItem)
-                                <li><a href="#">{{ $subItem->title }}</li>
-                            @endforeach
-                        </ul>
-                </div>
-        </div>
-
-            
-        @endforeach
-            
-        </div>
-    </div>
-</div>
 <div id="why_me">
     <div class="center">
         <div class="left_whyme">
@@ -76,6 +50,22 @@
     </div>
     <div class="center center_for_btn">
         <p class="button"><a href="/contact"><noscript><img src="https://www.cstom.ru/wp-content/themes/cstom/images/order_doctor.png" alt="" /></noscript><img class="lazyload" src="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20210%20140%22%3E%3C/svg%3E" data-src="https://www.cstom.ru/wp-content/themes/cstom/images/order_doctor.png" alt="">Записаться на приём</a></p>
+    </div>
+</div>
+<div class="information_block">
+    <div class="center">
+        <div class="left youtube"> 
+            <noscript><img src="https://www.cstom.ru/wp-content/uploads/2018/01/DSC_0220.jpg" alt="Центр Семейной стоматологии" /></noscript>
+            <img class=" lazyloaded" src="https://www.cstom.ru/wp-content/uploads/2018/01/DSC_0220.jpg" data-src="https://www.cstom.ru/wp-content/uploads/2018/01/DSC_0220.jpg" alt="Центр Семейной стоматологии">
+        </div>
+        <div class="right">
+            <div class="post_one">
+                <h2>Стоматология в Смоленске – лечение зубов без боли, по низким ценам и с гарантией!</h2>
+                <p>Клиника «Центр Семейной Стоматологии» в Смоленске на ул.Кирова, д. 29 предлагает новый технологический подход к лечению зубов, а также к профилактике заболеваний. Нашей стоматологической клинике можно доверить здоровье зубов всей семьи!</p>
+                <p>Наша стоматологическая клиника спасет зуб даже в том случае, когда кажется, что единственный путь — это удаление. Компьютерная томография позволяет нам ставить на 100% точные диагнозы, предлагая оптимальный способ лечения, протезирования, имплантации, исправления прикуса. Профилактика заболеваний для вас и ваших детей. Выбирайте нашу клинику вместо обычной поликлиники, и мы гарантируем вам индивидуальных подход, качество услуг и гарантию.</p>
+                <p>Предложим способы отбеливания зубов или установку виниров. При комплексном подходе и для постоянных клиентов предложим индивидуальные финансовые условия.</p><p>Наша клиника принимает пациентов ежедневно и даже в праздничные дни! Наша стоматология в Смоленске принимает пациентов со всей России и из стран ближнего зарубежья. Первичная консультация бесплатна для всех!</p>
+            </div>
+        </div>
     </div>
 </div>
 @endsection
