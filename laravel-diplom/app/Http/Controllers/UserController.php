@@ -49,6 +49,44 @@ class UserController extends Controller
             'discount' => $request->input('discount'),
         ]);
 
-        return redirect()->route('users.index')->with('success', 'Discount updated successfully.');
+        return redirect()->route('admin.users')->with('success', 'Discount updated successfully.');
+    }
+
+    public function addVisitDate(Request $request)
+    {
+        if (!Auth::user()->canManageRoles()) {
+            abort(403, 'Unauthorized action.');
+        }
+
+        $request->validate([
+            'date' => 'required|date_format:Y-m-d',
+        ]);
+
+        $user = Auth::user();
+        $visitDates = $user->visit_dates ?? [];
+
+        if (!in_array($request->date, $visitDates)) {
+            $visitDates[] = $request->date;
+            $user->update(['visit_dates' => $visitDates]);
+            return response()->json(['success' => true]);
+        }
+
+        return response()->json(['success' => false, 'message' => 'Дата уже добавлена.']);
+    }
+
+    public function getVisitDates(User $user)
+    {
+        $visitDates = $user->visit_dates ?? [];
+        $events = [];
+
+        foreach ($visitDates as $date) {
+            $events[] = [
+                'title' => 'Посещение',
+                'start' => $date,
+                'color' => 'green'
+            ];
+        }
+
+        return response()->json($events);
     }
 }

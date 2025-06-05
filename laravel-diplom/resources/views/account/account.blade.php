@@ -23,7 +23,6 @@
     <div class="mt-4">
         <div class="">История посещений</div>
         <div class="">Скидка {{Auth::user()->discount ?? 0}} %</div>
-        <div class="">Обновить профиль</div>
     </div>
 @endif
 
@@ -44,6 +43,7 @@
             <li><a href="{{ route('menu.list-stock') }}">Список акций</a></li>
             <li><a href="{{ route('menu.callbacks') }}">Список заявок</a></li>
             <li><a href="{{ route('admin.dentists') }}">Список врачей</a></li>
+            <li><a href="{{ route('users.index') }}">Список пользователей</a></li>
         </ul>
     </div>
 @elseif (Auth::user()->isSystemAdmin())

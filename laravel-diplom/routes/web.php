@@ -87,6 +87,10 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/users/{user}/edit', [UserController::class, 'edit'])->name('users.edit');
     Route::put('/users/{user}', [UserController::class, 'update'])->name('users.update');
 
+    Route::post('/add-visit-date', [UserController::class, 'addVisitDate'])->name('add.visit.date');
+
+    Route::get('/visit-dates/{user}', [UserController::class, 'getVisitDates'])->name('visit.dates');
+
     Route::get('/callbacks', [CallbackController::class, 'listcallback'])->name('menu.callbacks');
 
     Route::get('/notifications/{id}/read', [NotificationController::class, 'markAsRead']);
