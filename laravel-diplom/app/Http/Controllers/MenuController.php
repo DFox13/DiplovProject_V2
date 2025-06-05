@@ -196,10 +196,6 @@ class MenuController extends Controller
         return view('admin.list-categories', compact('categories'));
     }
     
-    public function getCategoryTitlesHome(){
-        $categories = MainMenuItems::with('subMenuItems')->get();
-        return view('home', compact('categories'));
-    }
 
     public function getCategoryTitles()
     {
