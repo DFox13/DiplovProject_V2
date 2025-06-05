@@ -810,9 +810,7 @@ a:hover {
 }
 
 
-Конечно! Вот все стили, связанные с классами из предоставленных файлов, объединённые в один код:
 
-```css
 /* Стили из Pasted_Text_1748790312582.txt */
 
 .one_service {
@@ -1584,7 +1582,7 @@ a:hover {
     #why_me .right_whyme {
         float: none;
         width: 100%;
-        background-color: #fff;
+        /* background-color: #fff; */
     }
 }
 
@@ -1651,9 +1649,9 @@ a:hover {
     margin-right: 0;
 }
 
-#why_me .right_whyme {
+/* #why_me .right_whyme {
     background-color: #fff;
-}
+} */
 
 #why_me .right_whyme .post_one {
     max-width: 80%;
@@ -1712,9 +1710,9 @@ a:hover {
     margin-right: 0;
 }
 
-#why_me .right_whyme {
+/* #why_me .right_whyme {
     background-color: #fff;
-}
+} */
 
 #why_me .right_whyme .post_one {
     max-width: 80%;
@@ -1735,31 +1733,6 @@ a:hover {
     font-weight: 700;
 }
 
-/* Дополнительные стили */
-
-.fotorama__arr {
-    /* Стили для стрелок слайдера */
-}
-
-.fotorama__video-close {
-    /* Стили для закрытия видео в слайдере */
-}
-
-.fotorama__arr--prev {
-    /* Стили для предыдущей стрелки слайдера */
-}
-
-.fotorama__arr--next {
-    /* Стили для следующей стрелки слайдера */
-}
-
-.fotorama__arr--disabled {
-    /* Стили для отключённых стрелок слайдера */
-}
-
-.fotorama__video-close {
-    /* Стили для закрытия видео в слайдере */
-}
 
 a {
     color: #0c8084;
@@ -1771,7 +1744,6 @@ a:hover {
     text-decoration: none;
 }
 
-/* Дополнительные стили из Pasted_Text_1748790271978.txt */
 
 #services {
     padding: 10px 0;
@@ -1888,22 +1860,68 @@ a:hover {
     position: relative;
     margin: 120px 0;
 }
+#why_me .center{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
 
 #why_me .center_for_btn {
     transform: translateY(92px);
 }
+p.button {
+  padding: 15px 0;
+}
 
+#why_me .center_for_btn {
+  transform: translateY(92px);
+}
+#main a {
+  transition: 1s;
+}
+p.button a {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: .42px;
+  color: #fff;
+  padding: 15px 25px;
+  border-radius: 100px;
+  background: #0c8084;
+  text-decoration: none;
+  display: inline-block;
+}
+p.button a img {
+  display: none;
+}
+p.button img {
+  margin: 0 10px -7px -8px;
+  max-width: 27px;
+}
 #why_me:before {
-    content: '';
+  content: '';
+  height: 100%;
+  width: 58%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .6) 100%), linear-gradient(0deg, rgba(255, 255, 255, .7) 0%, rgba(255, 255, 255, .7) 100%), url(//www.cstom.ru/wp-content/themes/cstom/images/why_left_bg.jpeg) #d3d3d3 50% / cover no-repeat;
+  z-index: -1;
+}
+
+#why_me::after{
+  content: '';
     height: 100%;
-    width: 58%;
+    width: 42%;
     position: absolute;
-    left: 0;
+    right: 0;
     top: 0;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .6) 100%), linear-gradient(0deg, rgba(255, 255, 255, .7) 0%, rgba(255, 255, 255, .7) 100%), url(//www.cstom.ru/wp-content/themes/cstom/images/why_right_bg.jpeg) #d3d3d3 50% / cover no-repeat;
+    z-index: -1;
 }
 
 #why_me .right_whyme {
-    background-color: #fff;
+  width: 37%;
+  flex: 0 0 auto;
 }
 
 #why_me .left_whyme .one_whyme {
@@ -1986,9 +2004,9 @@ a:hover {
     margin-right: 0;
 }
 
-#why_me .right_whyme {
+/* #why_me .right_whyme {
     background-color: #fff;
-}
+} */
 
 #why_me .right_whyme .post_one {
     max-width: 80%;
@@ -2047,9 +2065,9 @@ a:hover {
     margin-right: 0;
 }
 
-#why_me .right_whyme {
+/* #why_me .right_whyme {
     background-color: #fff;
-}
+} */
 
 #why_me .right_whyme .post_one {
     max-width: 80%;
@@ -2259,6 +2277,45 @@ a:hover {
     transition: 1s;
 }
 
-.one_service:hover .button_service a:before {
-    content:
+.information_block .center {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 120px;
+  flex-wrap: wrap;
+}
+.information_block .left {
+  width: 45%;
+  flex: 0 0 auto;
+}
+.information_block .left img {
+  border-bottom: 3px solid #0c8084;
+  padding-bottom: 60px;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+.information_block .right {
+  width: 49%;
+  flex: 0 0 auto;
+}
+.post_one {
+  line-height: 17pt;
+}
+.information_block h2 {
+  font-family: pfh-highway;
+  font-size: 40px;
+  color: #0c8084;
+  letter-spacing: 1.2px;
+  line-height: normal;
+  margin-bottom: 40px;
+}
+
+.information_block .right p {
+  margin: 0 0 10px;
+  font-size: 15px;
+  color: #4d4e4f;
+  line-height: 180%;
+  font-weight: 500;
+  letter-spacing: .45px;
 }
