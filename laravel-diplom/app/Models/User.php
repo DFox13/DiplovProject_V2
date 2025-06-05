@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Models;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -15,11 +14,17 @@ class User extends Authenticatable
         'email',
         'password',
         'role_id',
+        'discount',
+        'visit_dates' 
     ];
 
     protected $hidden = [
         'password',
         'remember_token',
+    ];
+
+    protected $casts = [
+        'visit_dates' => 'array',
     ];
 
     public function role()
@@ -46,12 +51,19 @@ class User extends Authenticatable
     {
         return $this->isAdmin() || $this->isSystemAdmin();
     }
+
     public function notifications()
     {
         return $this->hasMany(\App\Models\Notification::class); 
     }
+
     public function canManageStaff(): bool
     {
         return $this->isSystemAdmin();
+    }
+
+    public function canManageStocks(): bool
+    {
+        return $this->isAdmin() || $this->isSystemAdmin();
     }
 }

@@ -22,7 +22,7 @@
 @if (Auth::user()->isUser())
     <div class="mt-4">
         <div class="">История посещений</div>
-        <div class="">Скидки</div>
+        <div class="">Скидка {{Auth::user()->discount ?? 0}} %</div>
         <div class="">Обновить профиль</div>
     </div>
 @endif
@@ -41,6 +41,9 @@
             <li><a href="{{ route('menu.list.categories') }}">Список категорий</a></li>
             <li><a href="{{ route('menu.add.sub-item') }}">Добавить подпункт</a></li>
             <li><a href="{{ route('menu.list.sub-items') }}">Список подпунктов</a></li>
+            <li><a href="{{ route('menu.list-stock') }}">Список акций</a></li>
+            <li><a href="{{ route('menu.callbacks') }}">Список заявок</a></li>
+            <li><a href="{{ route('admin.dentists') }}">Список врачей</a></li>
         </ul>
     </div>
 @elseif (Auth::user()->isSystemAdmin())

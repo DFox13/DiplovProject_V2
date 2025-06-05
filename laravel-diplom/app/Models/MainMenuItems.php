@@ -13,8 +13,7 @@ class MainMenuItems extends Model
         'title',
         'image',
         'show_on_home', 
-        'show_on_services', 
-        'show_on_dentists',
+        'show_on_services'
     ];
 
     public function subMenuItems()

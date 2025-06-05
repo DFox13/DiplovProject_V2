@@ -13,12 +13,13 @@ class AddStaffDetailsToStaffTable extends Migration
      */
     public function up()
     {
-        Schema::table('staff', function (Blueprint $table) {
-            $table->string('first_name')->nullable(); // Имя
-            $table->string('last_name')->nullable(); // Фамилия
-            $table->string('middle_name')->nullable(); // Отчество
-            $table->string('position')->nullable(); // Должность
-            $table->string('image_path')->nullable(); // Путь к изображению
+        Schema::table('dentists', function (Blueprint $table) {
+            $table->string('first_name')->nullable();
+            $table->string('last_name')->nullable();
+            $table->string('middle_name')->nullable();
+            $table->string('dolznost')->nullable();
+            $table->string('image_path')->nullable();
+            $table->string('status')->nullable();
         });
     }
 
@@ -29,8 +30,8 @@ class AddStaffDetailsToStaffTable extends Migration
      */
     public function down()
     {
-        Schema::table('staff', function (Blueprint $table) {
-            $table->dropColumn(['first_name', 'last_name', 'middle_name', 'position', 'image_path']);
+        Schema::table('dentists', function (Blueprint $table) {
+            $table->dropColumn(['first_name', 'last_name', 'middle_name', 'dolznost', 'image_path', 'status']);
         });
     }
 }

@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
 
-class Staff extends Model
+class Dentists extends Model
 {
     use HasFactory;
 
@@ -14,8 +14,9 @@ class Staff extends Model
         'first_name',
         'last_name',
         'middle_name',
-        'position',
+        'dolznost',
         'image_path',
+        'status',
     ];
 
     /**

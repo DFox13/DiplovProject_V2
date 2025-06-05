@@ -27,7 +27,7 @@
                 <p class="tel"><a href="https://www.cstom.ru/tel:89107104824">8 (910) 710-48-24</a></p>
             </div>
             <div class="btn-header">
-                <a href="" class="btn-head ">Заказать обратный звонок</a>
+            <a href="#" id="openModal" class="btn-head ">Заказать обратный звонок</a>
             
                 
                 @if (Auth::check())
@@ -52,7 +52,7 @@
             <a href="/about">О нас</a>
             <a href="/stock">Акции</a>
             <a href="/contacts">Контакты</a>
-            <a href="{{ route('dentists.index') }}">Врачи</a>
+            <a href="/dentists">Врачи</a>
             <a href="/reviews">Отзывы</a>
         </div>
         <button id="scrollToTop" style="display: none;">Вверх <i class="fa-solid fa-arrow-up"></i></button>
